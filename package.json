@@ -1,6 +1,6 @@
 {
-  "name": "@boxcc/next-hsuc",
-  "version": "0.0.7",
+  "name": "@dennpa/next-hsuc",
+  "version": "0.0.8",
   "description": "react服务端渲染，打包文件上传到云端，提高加载速度",
   "main": "index.js",
   "scripts": {},
