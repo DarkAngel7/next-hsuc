@@ -115,7 +115,7 @@ class Hsuc {
             }
             break;
           case file.isFile():
-            await Base.delFile(filePath);
+            // await Base.delFile(filePath);
             // this.message("删除本地文件：", folder + file.name);
             break;
         }
