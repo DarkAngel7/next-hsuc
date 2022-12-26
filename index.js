@@ -23,7 +23,7 @@ class Hsuc {
       this.message("只有打包模式才会上传");
       return;
     }
-    
+
     // 初始化
     this.options.cloudFolder = this.options.cloudFolder.replace(/([^/])$/, "$1/");
     this.options.domain = this.options.domain.replace(/([^/])$/, "$1/");
@@ -60,7 +60,7 @@ class Hsuc {
 
       this.cloud = new Cloud(this.options);
       if(!this.cloud.CDN){
-        console.warn("必须传入到云端的参数，目前支持aliyun,huawei,upyun,qiniu，也可以自定义上传文件。本次打包将不上传");
+        console.warn("必须传入到云端的参数，目前支持aliyun,huawei,upyun,qiniu,aws，也可以自定义上传文件。本次打包将不上传");
         return;
       }
 
