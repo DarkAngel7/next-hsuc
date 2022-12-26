@@ -1,5 +1,4 @@
-
-
+const Tencent = require("./tencent");
 
 
 class Cloud {
@@ -30,6 +29,10 @@ class Cloud {
           case "tencent":
             const Tencent = require("../cloud/tencent");
             this.CDN = new Tencent(options[key]);
+            break;
+          case "aws":
+            const Aws = require("../cloud/aws");
+            this.CDN = new Aws(options[key]);
             break;
         }
         if(this.CDN) break;

@@ -1,6 +1,6 @@
 {
   "name": "@dennpa/next-hsuc",
-  "version": "0.0.8",
+  "version": "0.0.9",
   "description": "react服务端渲染，打包文件上传到云端，提高加载速度",
   "main": "index.js",
   "scripts": {},
@@ -24,10 +24,12 @@
     "huawei",
     "tencent",
     "qiniu",
-    "upyun"
+    "upyun",
+    "aws"
   ],
   "dependencies": {
     "ali-oss": "^6.1.0",
+    "aws-sdk": "^2.1282.0",
     "bluebird": "^3.5.3",
     "cos-nodejs-sdk-v5": "^2.5.20",
     "esdk-obs-nodejs": "^3.1.3",
