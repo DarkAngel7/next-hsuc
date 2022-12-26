@@ -30,10 +30,15 @@ class Aws {
 
   async upload(path, CDNPath){
     return new Promise((resolve, reject) => {
-      this.s3.putObject( {
+      let req = {
         Key: CDNPath,
-        Body: fs.createReadStream(path)
-      }, function(err, data) {
+        Body: fs.createReadStream(path),
+      }
+      // css file
+      if (CDNPath.indexOf('.css') !== -1) {
+        req.ContentType = 'text/css'
+      }
+      this.s3.putObject(req, function(err, data) {
         if (err) {
           reject(err)
         } else {
